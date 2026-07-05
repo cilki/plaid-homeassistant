@@ -1,0 +1,62 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "Plaid credentials",
+                "description": "Enter your Plaid API credentials.",
+                "data": {
+                    "client_id": "Client ID",
+                    "client_secret": "Secret"
+                }
+            },
+            "authorization": {
+                "title": "Authorize Plaid",
+                "description": "Click the following link to authenticate Plaid, then continue: [Authorize]({hosted_link})"
+            }
+        },
+        "error": {
+            "missing_credentials": "Client ID and Secret are required.",
+            "invalid_credentials": "Could not create a link token. Check your Client ID and Secret.",
+            "invalid_link_token": "Authorization was not completed. Please try again.",
+            "invalid_public_token": "Failed to exchange the public token.",
+            "invalid_access_token": "Could not retrieve accounts for this item."
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "title": "Plaid options",
+                "data": {
+                    "enable_transactions": "Sync transactions"
+                },
+                "data_description": {
+                    "enable_transactions": "Store all transactions permanently and fire Logbook events for new ones."
+                }
+            }
+        }
+    },
+    "services": {
+        "get_transactions": {
+            "name": "Get transactions",
+            "description": "Return the full, permanently-stored transaction ledger.",
+            "fields": {
+                "config_entry_id": {
+                    "name": "Config entry",
+                    "description": "Limit results to a single Plaid config entry."
+                },
+                "account_id": {
+                    "name": "Account ID",
+                    "description": "Limit results to a single account."
+                },
+                "start_date": {
+                    "name": "Start date",
+                    "description": "Only include transactions on or after this date."
+                },
+                "end_date": {
+                    "name": "End date",
+                    "description": "Only include transactions on or before this date."
+                }
+            }
+        }
+    }
+}

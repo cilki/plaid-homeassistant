@@ -1,0 +1,18 @@
+get_transactions:
+  fields:
+    config_entry_id:
+      example: 1a2b3c4d5e6f
+      selector:
+        text:
+    account_id:
+      example: abcdef123456
+      selector:
+        text:
+    start_date:
+      example: "2026-01-01"
+      selector:
+        date:
+    end_date:
+      example: "2026-12-31"
+      selector:
+        date:
