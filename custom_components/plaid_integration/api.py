@@ -7,9 +7,7 @@ from plaid.model.accounts_get_request import AccountsGetRequest
 from plaid.model.country_code import CountryCode
 from plaid.model.item_public_token_exchange_request import ItemPublicTokenExchangeRequest
 from plaid.model.link_token_create_request import LinkTokenCreateRequest
-from plaid.model.link_token_create_request_hosted_link import (
-    LinkTokenCreateRequestHostedLink,
-)
+from plaid.model.link_token_create_hosted_link import LinkTokenCreateHostedLink
 from plaid.model.link_token_create_request_user import LinkTokenCreateRequestUser
 from plaid.model.link_token_get_request import LinkTokenGetRequest
 from plaid.model.products import Products
@@ -59,7 +57,7 @@ class PlaidClient:
             country_codes=[CountryCode("US")],
             user=LinkTokenCreateRequestUser(client_user_id=CLIENT_USER_ID),
             products=[Products("transactions")],
-            hosted_link=LinkTokenCreateRequestHostedLink(),
+            hosted_link=LinkTokenCreateHostedLink(),
         )
         try:
             data = await self._call(self._client.link_token_create, request)
