@@ -1,12 +1,12 @@
 {
-    "domain": "plaid_integration",
-    "name": "Plaid Integration",
-    "documentation": "https://github.com/cilki/plaid-homeassistant",
-    "issue_tracker": "https://github.com/cilki/plaid-homeassistant/issues",
-    "dependencies": [],
-    "codeowners": ["@cilki"],
-    "version": "1.0.0",
-    "requirements": ["plaid-python==18.4.0"],
-    "iot_class": "cloud_polling",
-    "config_flow": true
+  "domain": "plaid_integration",
+  "name": "Plaid Integration",
+  "documentation": "https://github.com/cilki/plaid-homeassistant",
+  "issue_tracker": "https://github.com/cilki/plaid-homeassistant/issues",
+  "dependencies": [],
+  "codeowners": ["@cilki"],
+  "version": "1.0.0",
+  "requirements": ["plaid-python>=38.3.0"],
+  "iot_class": "cloud_polling",
+  "config_flow": true
 }
